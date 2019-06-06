@@ -1,3 +1,9 @@
+let colors = ['blue','red','orange','green','purple','yellow','indigo','black'];
+     function changeColor(e){
+        let randColor = colors[Math.floor(Math.random()*colors.length)];
+        e.style.color = randColor;
+    }; 
+
 document.addEventListener('DOMContentLoaded', function() {
     let div1 = document.createElement('div');
     div1.className = "header-container";
@@ -8,7 +14,7 @@ document.addEventListener('DOMContentLoaded', function() {
     h1.appendChild(h1Text);
     div1.appendChild(h1);
     h1.className = "h1"
-    
+    h1.addEventListener('dblclick', changeColor, h1);
 
     let h2 = document.createElement('h2');
     let h2text = document.createTextNode('This is an h2');
@@ -40,9 +46,6 @@ document.addEventListener('DOMContentLoaded', function() {
     div1.appendChild(h6);
     h6.className = "h6";
 
-    let colors = ['blue','red','orange','green','purple','yellow','indigo','black']
-    function changeColor(e){
-        Math.floor()
-    }
+    
 });
 
